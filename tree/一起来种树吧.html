@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        #y1 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            top: 50px;
+            left: 50px;
+        }
+
+        #line1 {
+            position: absolute;
+            width: 1px;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            opacity: 0.8;
+        }
+
+        #line2 {
+            position: absolute;
+            top: 60px;
+            left: 160px;
+            /*width: 1px;*/
+            /*height: 100px;*/
+            background-color: white;
+            opacity: 0.8;
+        }
+
+        #line3 {
+            position: absolute;
+            top: 159px;
+            /*left: 60px;*/
+            /*width: 100px;*/
+            /*height: 1px;*/
+            background-color: white;
+            opacity: 0.8;
+        }
+
+        #line4 {
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            /*width: 1px;*/
+            /*height: 100px;*/
+            background-color: white;
+            opacity: 0.8;
+        }
+
+        #e_l {
+            color: red;
+            position: absolute;
+            font-size: 5px;
+            transform: rotate(90deg);
+            left: 5px;
+            top: 3px;
+            opacity: 0;
+        }
+
+        #e_r {
+            color: red;
+            position: absolute;
+            font-size: 5px;
+            transform: rotate(90deg);
+            left: 12px;
+            top: 3px;
+            opacity: 0;
+        }
+
+        #mou {
+            color: red;
+            position: absolute;
+            font-size: 13px;
+            left: 6.5px;
+            top: 12px;
+            opacity: 0;
+        }
+
+        #tree1 {
+            height: 40px;
+            width: 5px;
+            background-color: maroon;
+            position: absolute;
+            left: 100px;
+            top: 115px;
+            z-index: 3;
+        }
+
+        #tree2 {
+            height: 40px;
+            width: 5px;
+            background-color: maroon;
+            position: absolute;
+            left: 105px;
+            top: 115px;
+            z-index: 3;
+        }
+
+        #tree3 {
+            height: 40px;
+            width: 5px;
+            background-color: maroon;
+            position: absolute;
+            left: 110px;
+            top: 115px;
+            z-index: 3;
+        }
+
+        /*#leaf {*/
+        /*position: absolute;*/
+        /*height: 51px;*/
+        /*width: 46px;*/
+        /*background-color: green;*/
+        /*border-radius: 50%;*/
+        /*top: 75px;*/
+        /*left: 83px;*/
+        /*}*/
+        #leaf {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            background-color: lawngreen;
+            border-radius: 50%;
+            top: 84px;
+            left: 86px;
+            opacity: 0;
+        }
+
+        #son1 {
+            position: absolute;
+            height: 15px;
+            width: 5px;
+            background-color: maroon;
+            top: -10px;
+            left: -5px;
+            transform: rotate(300deg);
+            z-index: 3;
+        }
+
+        #son2 {
+            position: absolute;
+            height: 25px;
+            width: 5px;
+            background-color: maroon;
+            top: -18px;
+            left: 1px;
+            transform: rotate(15deg);
+            z-index: 3;
+        }
+
+        #son3 {
+            position: absolute;
+            height: 15px;
+            width: 5px;
+            background-color: maroon;
+            top: -12px;
+            left: 3px;
+            transform: rotate(30deg);
+            z-index: 3;
+        }
+
+        #tree {
+            cursor: pointer;
+        }
+
+        #leaf-1 {
+            width: 2px;
+            height: 4px;
+            background-color: peru;
+            position: absolute;
+            top: 95px;
+            left: 115px;
+            z-index: 4;
+            opacity: 0;
+            transform: rotate(30deg);
+        }
+
+        #leaf-2 {
+            width: 4px;
+            height: 2px;
+            background-color: peru;
+            position: absolute;
+            top: 95px;
+            left: 105px;
+            z-index: 4;
+            opacity: 0;
+            transform: rotate(60deg);
+        }
+
+        #leaf-3 {
+            width: 2px;
+            height: 4px;
+            background-color: peru;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 4;
+            opacity: 0;
+            transform: rotate(90deg);
+        }
+
+        #leaf-4 {
+            width: 4px;
+            height: 2px;
+            background-color: peru;
+            position: absolute;
+            top: 90px;
+            left: 85px;
+            z-index: 4;
+            opacity: 0;
+            transform: rotate(120deg);
+        }
+
+        #leaf-5 {
+            width: 2px;
+            height: 4px;
+            background-color: peru;
+            position: absolute;
+            top: 100px;
+            left: 125px;
+            z-index: 4;
+            opacity: 0;
+            transform: rotate(150deg);
+        }
+
+        #leaf-6 {
+            width: 4px;
+            height: 2px;
+            background-color: peru;
+            position: absolute;
+            top: 100px;
+            left: 95px;
+            z-index: 4;
+            opacity: 0;
+            transform: rotate(180deg);
+        }
+
+        #leaf-7 {
+            width: 2px;
+            height: 4px;
+            background-color: peru;
+            position: absolute;
+            top: 95px;
+            left: 90px;
+            z-index: 4;
+            opacity: 0;
+            transform: rotate(210deg);
+        }
+
+        #snow {
+            width: 40px;
+            height: 20px;
+            background-color: white;
+            position: absolute;
+            top: 144px;
+            left: 87px;
+            border-radius: 50%;
+            opacity: 0;
+        }
+        #one {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 600px;
+            left: 500px;
+            transform: rotate(15deg);
+        }
+
+        #two {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 600px;
+            left: 530px;
+            transform: rotate(15deg);
+        }
+
+        #three {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 600px;
+            left: 560px;
+            transform: rotate(15deg);
+        }
+
+        #four {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 600px;
+            left: 590px;
+            transform: rotate(15deg);
+        }
+
+        #five {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 600px;
+            left: 620px;
+            transform: rotate(15deg);
+        }
+
+        #six {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 600px;
+            left: 650px;
+            transform: rotate(15deg);
+        }
+
+        #seven {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 600px;
+            left: 680px;
+            transform: rotate(15deg);
+        }
+
+        #eight {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 600px;
+            left: 710px;
+            transform: rotate(15deg);
+        }
+
+        #nine {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 600px;
+            left: 740px;
+            transform: rotate(15deg);
+        }
+
+        #ten {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 600px;
+            left: 770px;
+            transform: rotate(15deg);
+        }
+
+        #wave {
+            position: absolute;
+            height: 650px;
+            width: 1900px;
+            overflow: hidden;
+        }
+/*我是分割线*/
+        #one1 {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 500px;
+            transform: rotate(165deg);
+        }
+
+        #two1 {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 530px;
+            transform: rotate(165deg);
+        }
+
+        #three1 {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 560px;
+            transform: rotate(165deg);
+        }
+
+        #four1 {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 590px;
+            transform: rotate(165deg);
+        }
+
+        #five1 {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 620px;
+            transform: rotate(165deg);
+        }
+
+        #six1 {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 650px;
+            transform: rotate(165deg);
+        }
+
+        #seven1 {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 680px;
+            transform: rotate(165deg);
+        }
+
+        #eight1 {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 710px;
+            transform: rotate(165deg);
+        }
+
+        #nine1 {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 740px;
+            transform: rotate(165deg);
+        }
+
+        #ten1 {
+            width: 30px;
+            height: 2px;
+            background-color: aqua;
+            position: absolute;
+            top: 0;
+            left: 770px;
+            transform: rotate(165deg);
+        }
+
+        #wave1 {
+            position: absolute;
+            left: 18px;
+            top: 645px;
+            height: 650px;
+            width: 1900px;
+            overflow: hidden;
+
+        }
+        #river {
+            position: absolute;
+            top: 657px;
+            height: 2px;
+            width: 1900px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body id="bd">
+<div id="y1">
+    <div id="line1"></div>
+    <div id="e_l"> X</div>
+    <div id="e_r"> X</div>
+    <div id="mou">^</div>
+</div>
+<div id="line2"></div>
+<div id="line3"></div>
+<div id="line4"></div>
+<div id="tree">
+    <div id="tree1">
+        <div id="son1"></div>
+    </div>
+    <div id="tree2">
+        <div id="son2"></div>
+    </div>
+    <div id="tree3">
+        <div id="son3"></div>
+    </div>
+    <div id="leaf"></div>
+    <div id="leaf-1"></div>
+    <div id="leaf-2"></div>
+    <div id="leaf-3"></div>
+    <div id="leaf-4"></div>
+    <div id="leaf-5"></div>
+    <div id="leaf-6"></div>
+    <div id="leaf-7"></div>
+    <div id="snow"></div>
+
+
+    <audio src="DEPAPEPE - Wedding Bell.mp3" autoplay="true">
+    </audio>
+
+</div>
+<div id="wave">
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <div id="five"></div>
+    <div id="six"></div>
+    <div id="seven"></div>
+    <div id="eight"></div>
+    <div id="nine"></div>
+    <div id="ten"></div>
+</div>
+
+<div id="wave1">
+    <div id="one1"></div>
+    <div id="two1"></div>
+    <div id="three1"></div>
+    <div id="four1"></div>
+    <div id="five1"></div>
+    <div id="six1"></div>
+    <div id="seven1"></div>
+    <div id="eight1"></div>
+    <div id="nine1"></div>
+    <div id="ten1"></div>
+</div>
+<div id="river"></div>
+<script src="jquery-1.12.2.js"></script>
+<script>
+    var e_l = document.getElementById("e_l");
+    var e_r = document.getElementById("e_r");
+    var mou = document.getElementById("mou");
+    var bd = document.getElementById("bd");
+    var y1 = document.getElementById("y1");
+    var line1 = document.getElementById("line1");
+    var tree = document.getElementById("tree");
+    var leaf = document.getElementById("leaf");
+    var y1w = 20;
+    var y1h = 20;
+    var y1t = 50;
+    var y1l = 50;
+    var l2t = 60;
+    var timer = null;
+    var opa = 0;
+    var leaf_w = 40;
+    var leaf_h = 40;
+    var leaf_t = 84;
+    var leaf_l = 86;
+    var leaf1 = document.getElementById("leaf-1");
+    var leaf2 = document.getElementById("leaf-2");
+    var leaf3 = document.getElementById("leaf-3");
+    var leaf4 = document.getElementById("leaf-4");
+    var leaf5 = document.getElementById("leaf-5");
+    var leaf6 = document.getElementById("leaf-6");
+    var leaf7 = document.getElementById("leaf-7");
+    var leafOp = 1;
+    var leaf1T = 95;
+    var leaf2T = 95;
+    var leaf3T = 100;
+    var leaf4T = 90;
+    var leaf5T = 100;
+    var leaf6T = 100;
+    var leaf7T = 95;
+    var leaf1L = 115;
+    var leaf2L = 105;
+    var leaf3L = 100;
+    var leaf4L = 85;
+    var leaf5L = 125;
+    var leaf6L = 95;
+    var leaf7L = 90;
+    var snow = document.getElementById("snow");
+    var snowop = 0;
+    var flag = true;
+    tree.onclick = function () {
+        if (flag) {
+            flag = false;
+            timer = setInterval(function () {
+                y1w -= 0.02;
+                y1h -= 0.02;
+                y1t += 0.01;
+                y1l += 0.01;
+                y1.style.width = y1w + "px";
+                y1.style.height = y1h + "px";
+                y1.style.top = y1t + "px";
+                y1.style.left = y1l + "px";
+                if (y1w <= 0) {
+                    clearInterval(timer);
+                    y1.style.width = 0;
+                }
+            }, 5);
+
+            var l1w = 1;
+            var l1l = 1;
+            var line2 = document.getElementById("line2");
+            var l2h = 1;
+            var line3 = document.getElementById("line3");
+            var l3w = 1;
+            var l3l = 160;
+            var line4 = document.getElementById("line4");
+            var l4h = 1;
+            var l4t = 159;
+            var timer1 = setInterval(function () {
+                l1w += 0.1;
+//        l1l -= 0.25;
+                line1.style.width = l1w + "px";
+                line1.style.height = "1px";
+
+                opa += 0.001;
+                leaf.style.opacity = opa;
+//        line1.style.left = l1l + "px"
+                $("#wave > div").css("background" , "white");
+                $("#wave1 > div").css("background" , "white");
+                $("#river").css("background" , "aqua");
+                if (l1w >= 99) {
+                    clearInterval(timer1);
+                    bd.style.backgroundColor = "orangered";
+                    $("#river").css("background" , "orangered");
+                    var timer2 = setInterval(function () {
+                        l2h += 0.1;
+                        line2.style.height = l2h + "px";
+                        line2.style.width = "1px";
+                        l1w -= 0.1;
+                        l1l += 0.1
+                        line1.style.width = l1w + "px";
+                        line1.style.left = l1l + "px";
+                        leaf.style.backgroundColor = "green";
+                        leaf_h += 0.02;
+                        leaf_w += 0.01;
+                        leaf_t -= 0.02;
+                        leaf_l -= 0.005;
+                        leaf.style.height = leaf_h + "px";
+                        leaf.style.width = leaf_w + "px";
+                        leaf.style.top = leaf_t + "px";
+                        leaf.style.left = leaf_l + "px";
+
+                        $("#wave > div").css("background" , "red");
+                        $("#wave1 > div").css("background" , "red");
+                        if (l2h >= 99) {
+                            clearInterval(timer2);
+                            line1.style.height = 0;
+                            bd.style.backgroundColor = "gold";
+                            $("#river").css("background" , "gold");
+                            var timer3 = setInterval(function () {
+                                l3w += 0.1;
+                                l3l -= 0.1;
+                                line3.style.width = l3w + "px";
+                                line3.style.height = "1px";
+                                line3.style.left = l3l + "px";
+                                l2h -= 0.1;
+                                l2t += 0.1;
+                                line2.style.height = l2h + "px";
+                                line2.style.top = l2t + "px";
+                                leaf.style.backgroundColor = "peru";
+                                leaf1T += 0.03;
+                                leaf2T += 0.05;
+                                leaf3T += 0.05;
+                                leaf4T += 0.02;
+                                leaf5T += 0.05;
+                                leaf6T += 0.09;
+                                leaf7T += 0.07;
+                                leaf1L += 0.02;
+                                leaf2L -= 0.02;
+                                leaf3L += 0.04;
+                                leaf4L += 0.05;
+                                leaf5L -= 0.03;
+                                leaf6L -= 0.06;
+                                leaf7L += 0.03;
+                                leaf1.style.opacity = 1;
+                                leaf2.style.opacity = 1;
+                                leaf3.style.opacity = 1;
+                                leaf4.style.opacity = 1;
+                                leaf5.style.opacity = 1;
+                                leaf6.style.opacity = 1;
+                                leaf7.style.opacity = 1;
+                                leaf1.style.top = leaf1T + "px";
+                                leaf2.style.top = leaf2T + "px";
+                                leaf3.style.top = leaf3T + "px";
+                                leaf4.style.top = leaf4T + "px";
+                                leaf5.style.top = leaf5T + "px";
+                                leaf6.style.top = leaf6T + "px";
+                                leaf7.style.top = leaf7T + "px";
+                                leaf1.style.left = leaf1L + "px";
+                                leaf2.style.left = leaf2L + "px";
+                                leaf3.style.left = leaf3L + "px";
+                                leaf4.style.left = leaf4L + "px";
+                                leaf5.style.left = leaf5L + "px";
+                                leaf6.style.left = leaf6L + "px";
+                                leaf7.style.left = leaf7L + "px";
+
+                                $("#wave > div").css("background" , "yellow");
+                                $("#wave1 > div").css("background" , "yellow");
+                                if (l3w >= 100) {
+                                    clearInterval(timer3);
+                                    line2.style.width = 0;
+                                    bd.style.backgroundColor = "lightgray";
+                                    $("#river").css("background" , "lightgray");
+                                    var timer4 = setInterval(function () {
+                                        l4h += 0.1;
+                                        l4t -= 0.1;
+                                        line4.style.height = l4h + "px";
+                                        line4.style.width = "1px";
+                                        line4.style.top = l4t + "px";
+                                        l3w -= 0.1;
+                                        line3.style.width = l3w + "px";
+                                        leaf1.style.opacity = 0;
+                                        leaf2.style.opacity = 0;
+                                        leaf3.style.opacity = 0;
+                                        leaf4.style.opacity = 0;
+                                        leaf5.style.opacity = 0;
+                                        leaf6.style.opacity = 0;
+                                        leaf7.style.opacity = 0;
+                                        opa -= 0.001;
+                                        leaf.style.opacity = opa;
+                                        $("#wave > div").css("background" , "DimGray");
+                                        $("#wave1 > div").css("background" , "DimGray");
+                                        if (l4h >= 100) {
+                                            clearInterval(timer4);
+                                            line3.style.height = 0;
+                                            var timer5 = setInterval(function () {
+                                                y1w += 0.02;
+                                                y1h += 0.02;
+                                                y1t -= 0.01;
+                                                y1l -= 0.01;
+                                                y1.style.width = y1w + "px";
+                                                y1.style.height = y1h + "px";
+                                                y1.style.top = y1t + "px";
+                                                y1.style.left = y1l + "px";
+                                                l4h -= 0.1;
+                                                line4.style.height = l4h + "px";
+                                                snowop += 0.003;
+                                                snow.style.opacity = snowop;
+                                                $("#wave > div").css("background" , "white");
+                                                $("#wave1 > div").css("background" , "white");
+                                                if (y1w >= 20) {
+                                                    clearInterval(timer5);
+                                                    bd.style.backgroundColor = "black";
+                                                    $("#river").css("background" , "black");
+                                                    y1.style.backgroundColor = "yellow";
+                                                    $("#wave > div").css("background" , "aqua");
+                                                    $("#wave1 > div").css("background" , "aqua");
+                                                }
+                                            }, 5);
+                                        }
+                                    }, 5);
+                                }
+                            }, 5);
+                        }
+                    }, 5);
+                }
+            }, 5);
+        }
+    };
+    //上半部分
+    var oneHeigth = 2;
+    var oneTop = 600;
+    var oneX = 0;
+    var oneOp = 0;
+    var twoHeigth = 2;
+    var twoTop = 600;
+    var twoX = 0.2;
+    var twoOp = 0.1;
+    var threeHeigth = 2;
+    var threeTop = 600;
+    var threeX = 0.4;
+    var threeOp = 0.2;
+    var fourHeigth = 2;
+    var fourTop = 600;
+    var fourX = 0.6;
+    var fourOp = 0.3;
+    var fiveHeigth = 2;
+    var fiveTop = 600;
+    var fiveX = 0.8;
+    var fiveOp = 0.4;
+    var sixHeigth = 2;
+    var sixTop = 600;
+    var sixX = 1;
+    var sixOp = 0.5;
+    var sevenHeigth = 2;
+    var sevenTop = 600;
+    var sevenX = 1.2;
+    var sevenOp = 0.6;
+    var eightHeigth = 2;
+    var eightTop = 600;
+    var eightX = 1.4;
+    var eightOp = 0.7;
+    var nineHeigth = 2;
+    var nineTop = 600;
+    var nineX = 1.6;
+    var nineOp = 0.8;
+    var tenHeigth = 2;
+    var tenTop = 600;
+    var tenX = 1.8;
+    var tenOp = 0.9;
+    $(function () {
+        setInterval(function () {
+            oneX += 0.008;
+            oneHeigth = 300 + Math.sin(oneX) * 200;
+            oneTop = 600 - (200 + Math.sin(oneX) * 200);
+            $("#one").css("height", oneHeigth + "px");
+            $("#one").css("top", oneTop + "px");
+            oneOp = 0.5 + Math.sin(oneX);
+            $("#one").css("opacity", oneOp);
+        }, 1);
+        setInterval(function () {
+            twoX += 0.008;
+            twoHeigth = 300 + Math.sin(twoX) * 200;
+            twoTop = 600 - (200 + Math.sin(twoX) * 200);
+            $("#two").css("height", twoHeigth + "px");
+            $("#two").css("top", twoTop + "px");
+            twoOp = 0.5 + Math.sin(twoX + 0.1);
+            $("#two").css("opacity", twoOp);
+        }, 1);
+        setInterval(function () {
+            threeX += 0.008;
+            threeHeigth = 300 + Math.sin(threeX) * 200;
+            threeTop = 600 - (200 + Math.sin(threeX) * 200);
+            $("#three").css("height", threeHeigth + "px");
+            $("#three").css("top", threeTop + "px");
+            threeOp = 0.5 + Math.sin(threeX + 0.2);
+            $("#three").css("opacity", threeOp);
+        }, 1);
+        setInterval(function () {
+            fourX += 0.008;
+            fourHeigth = 300 + Math.sin(fourX) * 200;
+            fourTop = 600 - (200 + Math.sin(fourX) * 200);
+            $("#four").css("height", fourHeigth + "px");
+            $("#four").css("top", fourTop + "px");
+            fourOp = 0.5 + Math.sin(fourX + 0.3);
+            $("#four").css("opacity", fourOp);
+        }, 1);
+        setInterval(function () {
+            fiveX += 0.008;
+            fiveHeigth = 300 + Math.sin(fiveX) * 200;
+            fiveTop = 600 - (200 + Math.sin(fiveX) * 200);
+            $("#five").css("height", fiveHeigth + "px");
+            $("#five").css("top", fiveTop + "px");
+            fiveOp = 0.5 + Math.sin(fiveX + 0.4);
+            $("#five").css("opacity", fiveOp);
+        }, 1);
+        setInterval(function () {
+            sixX += 0.008;
+            sixHeigth = 300 + Math.sin(sixX) * 200;
+            sixTop = 600 - (200 + Math.sin(sixX) * 200);
+            $("#six").css("height", sixHeigth + "px");
+            $("#six").css("top", sixTop + "px");
+            sixOp = 0.5 + Math.sin(sixX + 0.5);
+            $("#six").css("opacity", sixOp);
+        }, 1);
+        setInterval(function () {
+            sevenX += 0.008;
+            sevenHeigth = 300 + Math.sin(sevenX) * 200;
+            sevenTop = 600 - (200 + Math.sin(sevenX) * 200);
+            $("#seven").css("height", sevenHeigth + "px");
+            $("#seven").css("top", sevenTop + "px");
+            sevenOp = 0.5 + Math.sin(sevenX + 0.6);
+            $("#seven").css("opacity", sevenOp);
+        }, 1);
+        setInterval(function () {
+            eightX += 0.008;
+            eightHeigth = 300 + Math.sin(eightX) * 200;
+            eightTop = 600 - (200 + Math.sin(eightX) * 200);
+            $("#eight").css("height", eightHeigth + "px");
+            $("#eight").css("top", eightTop + "px");
+            eightOp = 0.5 + Math.sin(eightX + 0.7);
+            $("#eight").css("opacity", eightOp);
+        }, 1);
+        setInterval(function () {
+            nineX += 0.008;
+            nineHeigth = 300 + Math.sin(nineX) * 200;
+            nineTop = 600 - (200 + Math.sin(nineX) * 200);
+            $("#nine").css("height", nineHeigth + "px");
+            $("#nine").css("top", nineTop + "px");
+            nineOp = 0.5 + Math.sin(nineX + 0.8);
+            $("#nine").css("opacity", nineOp);
+        }, 1);
+        setInterval(function () {
+            tenX += 0.008;
+            tenHeigth = 300 + Math.sin(tenX) * 200;
+            tenTop = 600 - (200 + Math.sin(tenX) * 200);
+            $("#ten").css("height", tenHeigth + "px");
+            $("#ten").css("top", tenTop + "px");
+            tenOp = 0.5 + Math.sin(tenX + 0.9);
+            $("#ten").css("opacity", tenOp);
+        }, 1);
+
+
+        function changeColor(element, color) {
+            $(element).css("background",  color);
+        }
+
+        $(document).on("keydown", function(e) {
+            var colorPool = ["red", "orangered", "hotpink", "gold" , "dodgerblue" , "purple" , "fuchsia" , "mediumspringgreen", "deeppink" , "yellow" , "aqua", "white" ]
+            var keycode = e.keyCode;
+            var num = Math.floor(Math.random()*12);
+            var colorChose = colorPool[num];
+            switch (keycode) {
+                case 81:
+                    changeColor("#one", colorChose);
+                    changeColor("#one1", colorChose);
+                    break;
+                case 87:
+                    changeColor("#two", colorChose);
+                    changeColor("#two1", colorChose);
+                    break;
+                case 69:
+                    changeColor("#three", colorChose);
+                    changeColor("#three1", colorChose);
+                    break;
+                case 82:
+                    changeColor("#four", colorChose);
+                    changeColor("#four1", colorChose);
+                    break;
+                case 84:
+                    changeColor("#five", colorChose);
+                    changeColor("#five1", colorChose);
+                    break;
+                case 89:
+                    changeColor("#six", colorChose);
+                    changeColor("#six1", colorChose);
+                    break;
+                case 85:
+                    changeColor("#seven", colorChose);
+                    changeColor("#seven1", colorChose);
+                    break;
+                case 73:
+                    changeColor("#eight", colorChose);
+                    changeColor("#eight1", colorChose);
+                    break;
+                case 79:
+                    changeColor("#nine", colorChose);
+                    changeColor("#nine1", colorChose);
+                    break;
+                case 80:
+                    changeColor("#ten", colorChose);
+                    changeColor("#ten1", colorChose);
+                    break;
+                case 192:
+                    $("#wave > div").css("background" , "aqua");
+                    $("#wave1 > div").css("background" , "aqua");
+//                    changeColor("#one", "aqua");
+//                    changeColor("#two", "aqua");
+//                    changeColor("#three", "aqua");
+//                    changeColor("#four", "aqua");
+//                    changeColor("#five", "aqua");
+//                    changeColor("#six", "aqua");
+//                    changeColor("#seven", "aqua");
+//                    changeColor("#eight", "aqua");
+//                    changeColor("#nine", "aqua");
+//                    changeColor("#ten", "aqua");
+                    break;
+            }
+        });
+//
+//        $("#wave").on("mouseenter", "div", function () {
+//            var colorPool = ["red", "orangered", "hotpink", "gold" , "dodgerblue" , "purple" , "fuchsia" , "mediumspringgreen", "deeppink" , "yellow" , "aqua", "white" ]
+//            var num = Math.floor(Math.random()*12);
+//            var colorChose = colorPool[num];
+//            $(this).css("background", colorChose);
+//        });
+
+
+        //下半部分
+        var oneHeigth1 = 2;
+        var oneTop1 = 600;
+        var oneX1 = 0;
+        var oneOp1 = 0;
+        var twoHeigth1 = 2;
+        var twoTop1 = 600;
+        var twoX1 = 0.2;
+        var twoOp1 = 0.1;
+        var threeHeigth1 = 2;
+        var threeTop1 = 600;
+        var threeX1 = 0.4;
+        var threeOp1 = 0.2;
+        var fourHeigth1 = 2;
+        var fourTop1 = 600;
+        var fourX1 = 0.6;
+        var fourOp1 = 0.3;
+        var fiveHeigth1 = 2;
+        var fiveTop1 = 600;
+        var fiveX1 = 0.8;
+        var fiveOp1 = 0.4;
+        var sixHeigth1 = 2;
+        var sixTop1 = 600;
+        var sixX1 = 1;
+        var sixOp1 = 0.5;
+        var sevenHeigth1 = 2;
+        var sevenTop1 = 600;
+        var sevenX1 = 1.2;
+        var sevenOp1 = 0.6;
+        var eightHeigth1 = 2;
+        var eightTop1 = 600;
+        var eightX1 = 1.4;
+        var eightOp1 = 0.7;
+        var nineHeigth1 = 2;
+        var nineTop1 = 600;
+        var nineX1 = 1.6;
+        var nineOp1 = 0.8;
+        var tenHeigth1 = 2;
+        var tenTop1 = 600;
+        var tenX1 = 1.8;
+        var tenOp1 = 0.9;
+            setInterval(function () {
+                oneX1 += 0.008;
+                oneHeigth1 = 300 + Math.sin(oneX1) * 200;
+                //oneTop1 = 600 - (200 + Math.sin(oneX1) * 200);
+                $("#one1").css("height", oneHeigth1 + "px");
+                oneOp1 = 0.5 + Math.sin(oneX1);
+                $("#one1").css("opacity", oneOp1);
+            }, 1);
+            setInterval(function () {
+                twoX1 += 0.008;
+                twoHeigth1 = 300 + Math.sin(twoX1) * 200;
+                //twoTop1 = 600 - (200 + Math.sin(twoX1) * 200);
+                $("#two1").css("height", twoHeigth1 + "px");
+                twoOp1 = 0.5 + Math.sin(twoX1 + 0.1);
+                $("#two1").css("opacity", twoOp1);
+            }, 1);
+            setInterval(function () {
+                threeX1 += 0.008;
+                threeHeigth1 = 300 + Math.sin(threeX1) * 200;
+                //threeTop1 = 600 - (200 + Math.sin(threeX1) * 200);
+                $("#three1").css("height", threeHeigth1 + "px");
+                threeOp1 = 0.5 + Math.sin(threeX1 + 0.2);
+                $("#three1").css("opacity", threeOp1);
+            }, 1);
+            setInterval(function () {
+                fourX1 += 0.008;
+                fourHeigth1 = 300 + Math.sin(fourX1) * 200;
+               // fourTop1 = 600 - (200 + Math.sin(fourX1) * 200);
+                $("#four1").css("height", fourHeigth1 + "px");
+                fourOp1 = 0.5 + Math.sin(fourX1 + 0.3);
+                $("#four1").css("opacity", fourOp1);
+            }, 1);
+            setInterval(function () {
+                fiveX1 += 0.008;
+                fiveHeigth1 = 300 + Math.sin(fiveX1) * 200;
+               // fiveTop1 = 600 - (200 + Math.sin(fiveX1) * 200);
+                $("#five1").css("height", fiveHeigth1 + "px");
+                fiveOp1 = 0.5 + Math.sin(fiveX1 + 0.4);
+                $("#five1").css("opacity", fiveOp1);
+            }, 1);
+            setInterval(function () {
+                sixX1 += 0.008;
+                sixHeigth1 = 300 + Math.sin(sixX1) * 200;
+                //sixTop1 = 600 - (200 + Math.sin(sixX1) * 200);
+                $("#six1").css("height", sixHeigth1 + "px");
+                sixOp1 = 0.5 + Math.sin(sixX1 + 0.5);
+                $("#six1").css("opacity", sixOp1);
+            }, 1);
+            setInterval(function () {
+                sevenX1 += 0.008;
+                sevenHeigth1 = 300 + Math.sin(sevenX1) * 200;
+                //sevenTop1 = 600 - (200 + Math.sin(sevenX1) * 200);
+                $("#seven1").css("height", sevenHeigth1 + "px");
+                sevenOp1 = 0.5 + Math.sin(sevenX1 + 0.6);
+                $("#seven1").css("opacity", sevenOp1);
+            }, 1);
+            setInterval(function () {
+                eightX1 += 0.008;
+                eightHeigth1 = 300 + Math.sin(eightX1) * 200;
+                //eightTop1 = 600 - (200 + Math.sin(eightX1) * 200);
+                $("#eight1").css("height", eightHeigth1 + "px");
+                eightOp1 = 0.5 + Math.sin(eightX1 + 0.7);
+                $("#eight1").css("opacity", eightOp1);
+            }, 1);
+            setInterval(function () {
+                nineX1 += 0.008;
+                nineHeigth1 = 300 + Math.sin(nineX1) * 200;
+               // nineTop1 = 600 - (200 + Math.sin(nineX1) * 200);
+                $("#nine1").css("height", nineHeigth1 + "px");
+                nineOp1 = 0.5 + Math.sin(nineX1 + 0.8);
+                $("#nine1").css("opacity", nineOp1);
+            }, 1);
+            setInterval(function () {
+                tenX1 += 0.008;
+                tenHeigth1 = 300 + Math.sin(tenX1) * 200;
+                //tenTop1 = 600 - (200 + Math.sin(tenX1) * 200);
+                $("#ten1").css("height", tenHeigth1 + "px");
+                tenOp1 = 0.5 + Math.sin(tenX1 + 0.9);
+                $("#ten1").css("opacity", tenOp1);
+            }, 1);
+
+
+//            $("#wave1").on("mouseenter", "div", function () {
+//                var colorPool = ["red", "orangered", "hotpink", "gold", "dodgerblue", "purple", "fuchsia", "mediumspringgreen", "deeppink", "yellow", "aqua", "white"]
+//                var num = Math.floor(Math.random() * 12);
+//                var colorChose = colorPool[num];
+//                $(this).css("background", colorChose);
+//            });
+    });
+
+</script>
+</body>
+</html>
