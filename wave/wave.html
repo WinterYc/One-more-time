@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wave</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.00" />
+    <link rel="stylesheet" href="wave.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <section class="wave" id="wave">
+    </section>
+</body>
+<script src="jquery-1.12.2.js"></script>
+<script>
+    function wave(num) {
+        $("#wave").css({
+            'width': window.innerWidth + 'px',
+            'height': window.innerHeight + 'px'
+        });
+        for (var i = 0; i < num; i++) {
+            var div = document.createElement('div');
+            $("#wave").append(div);
+            $("div")[i].style.left = (100 / num) * i + '%';
+            $("div")[i].style.transform = 'translateY(-100%)';
+            $("div")[i].style.animation = 'wave ' + (3.5 + 2.5 * Math.random()) + 's linear infinite';
+            $("div")[i].onchange = function() {
+                for (var i = 0; i < num; i++) {
+                    if ($("div")[i].style.height == '20%') {
+                        this.style.animation = 'wave' + (3.5 + 2.5 * Math.random()) + 's linear infinite';
+                    }
+                }
+            };
+        }
+    }
+    wave(30);
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="number.css">
+</head>
+
+<body>
+    <input id="telnum" type="text" name="" value="" style="top: 500px;left: 20%;position: absolute;width: 200px;height: 40px;font-size: 20px">
+</body>
+<script src="number.js"></script>
+<script src="jquery-1.12.2.js"></script>
+<script>
+    var telnum = document.getElementById('telnum');
+    telnum.onfocus = function() {
+        telnum.value = '';
+    };
+    telnum.onchange = function() {
+        $('section').remove();
+        createNum(110, telnum.value);
+    };
+</script>
+
+</html>

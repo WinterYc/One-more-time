@@ -1,0 +1,1037 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+section {
+    margin-top: 30px;
+    margin-left: 30px;
+    position: relative;
+    width: 70px;
+    height: 10px;
+    float: left;
+}
+
+section div {
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 5px black;
+    width: 0px;
+    height: 0px;
+}
+
+.undefined {
+    display: none;
+}
+
+
+/*zero star*/
+
+.zero div:nth-child(1) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    /*width: 50px;*/
+    top: 10px;
+    left: 10px;
+    animation: zeroOne 0.5s forwards;
+}
+
+@keyframes zeroOne {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.zero div:nth-child(2) {
+    position: absolute;
+    /*height: 100px;*/
+    height: 0;
+    width: 5px;
+    top: 10px;
+    left: 55px;
+    animation: zeroTwo 1.5s forwards;
+}
+
+@keyframes zeroTwo {
+    0% {
+        height: 0;
+    }
+    33% {
+        height: 0;
+    }
+    66% {
+        height: 50px;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+.zero div:nth-child(3) {
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    top: 105px;
+    left: 60px;
+    transform: translateX(-100%);
+    animation: zeroThree 0.5s forwards;
+}
+
+@keyframes zeroThree {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.zero div:nth-child(4) {
+    position: absolute;
+    height: 100px;
+    width: 5px;
+    top: 110px;
+    left: 10px;
+    transform: translateY(-100%);
+    animation: zeroFour 1.5s forwards;
+}
+
+@keyframes zeroFour {
+    0% {
+        height: 0;
+    }
+    33% {
+        height: 0;
+    }
+    66% {
+        height: 50px;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+
+/*zero end*/
+
+
+/*one star*/
+
+.one div {
+    position: absolute;
+    /*height: 100px;*/
+    height: 0;
+    width: 5px;
+    top: 10px;
+    left: 35px;
+    animation: oneOne 1.5s forwards;
+}
+
+@keyframes oneOne {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 50px;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+
+/*one end*/
+
+
+/*two star*/
+
+.two div:nth-child(1) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    /*width: 50px;*/
+    top: 10px;
+    left: 60px;
+    transform: translateX(-100%);
+    animation: twoOne 1.5s forwards;
+}
+
+@keyframes twoOne {
+    0% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.two div:nth-child(2) {
+    position: absolute;
+    /*height: 100px;*/
+    height: 0;
+    width: 5px;
+    top: 60px;
+    left: 55px;
+    transform: translateY(-100%);
+    animation: twoTwo 1s forwards;
+}
+
+@keyframes twoTwo {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.two div:nth-child(3) {
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    top: 105px;
+    left: 10px;
+    animation: twoThree 1.5s forwards;
+}
+
+@keyframes twoThree {
+    0% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.two div:nth-child(4) {
+    position: absolute;
+    height: 100px;
+    width: 5px;
+    top: 60px;
+    left: 10px;
+    animation: twoFour 1s forwards;
+}
+
+@keyframes twoFour {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.two div:nth-child(5) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 57.5px;
+    animation: twoFive 0.5s forwards;
+}
+
+@keyframes twoFive {
+    0% {
+        width: 0;
+        transform: translateX(32.5px);
+    }
+    100% {
+        width: 50px;
+        transform: translateX(10px);
+    }
+}
+
+
+/*two end*/
+
+
+/*three star*/
+
+.three div:nth-child(1) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    /*width: 50px;*/
+    top: 10px;
+    left: 60px;
+    transform: translateX(-100%);
+    animation: threeOne 1.5s forwards;
+}
+
+@keyframes threeOne {
+    0% {
+        width: 0;
+    }
+    66.6% {
+        width: 0;
+    }
+    100% {
+        width: 51px;
+    }
+}
+
+.three div:nth-child(2) {
+    position: absolute;
+    /*height: 100px;*/
+    height: 0;
+    width: 5px;
+    top: 60px;
+    left: 55px;
+    transform: translateY(-100%);
+    animation: threeTwo 1s forwards;
+}
+
+@keyframes threeTwo {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.three div:nth-child(3) {
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    top: 105px;
+    left: 60px;
+    transform: translateX(-100%);
+    animation: threeThree 1.5s forwards;
+}
+
+@keyframes threeThree {
+    0% {
+        width: 0;
+    }
+    66.6% {
+        width: 0;
+    }
+    100% {
+        width: 51px;
+    }
+}
+
+.three div:nth-child(4) {
+    position: absolute;
+    height: 100px;
+    width: 5px;
+    top: 60px;
+    left: 55px;
+    animation: threeFour 1s forwards;
+}
+
+@keyframes threeFour {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.three div:nth-child(5) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 57.5px;
+    left: 10px;
+    animation: threeFive 0.5s forwards;
+}
+
+@keyframes threeFive {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+
+/*three end*/
+
+
+/*four star*/
+
+.four div:nth-child(1) {
+    position: absolute;
+    height: 0;
+    width: 5px;
+    /*width: 50px;*/
+    top: 60px;
+    left: 10px;
+    animation: fourOne 1.5s forwards;
+    transform: translateY(-100%);
+}
+
+@keyframes fourOne {
+    0% {
+        height: 0;
+    }
+    66% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.four div:nth-child(2) {
+    position: absolute;
+    /*height: 100px;*/
+    height: 0;
+    width: 5px;
+    left: 55px;
+    top: 10px;
+    animation: fourTwo 0.5s forwards;
+}
+
+@keyframes fourTwo {
+    0% {
+        height: 0;
+        transform: translateY(57.5px);
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+.four div:nth-child(3) {
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    top: 57.5px;
+    left: 60px;
+    transform: translateX(-100%);
+    animation: fourThree 1s forwards;
+}
+
+@keyframes fourThree {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+
+/*four end*/
+
+
+/*five star*/
+
+.five div:nth-child(1) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    /*width: 50px;*/
+    top: 105px;
+    left: 60px;
+    transform: translateX(-100%);
+    animation: fiveOne 1.5s forwards;
+}
+
+@keyframes fiveOne {
+    0% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.five div:nth-child(2) {
+    position: absolute;
+    /*height: 100px;*/
+    height: 0;
+    width: 5px;
+    top: 60px;
+    left: 10px;
+    transform: translateY(-100%);
+    animation: fiveTwo 1s forwards;
+}
+
+@keyframes fiveTwo {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.five div:nth-child(3) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 10px;
+    left: 10px;
+    animation: fiveThree 1.5s forwards;
+}
+
+@keyframes fiveThree {
+    0% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.five div:nth-child(4) {
+    position: absolute;
+    height: 100px;
+    width: 5px;
+    top: 60px;
+    left: 55px;
+    animation: fiveFour 1s forwards;
+}
+
+@keyframes fiveFour {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.five div:nth-child(5) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 57.5px;
+    animation: fiveFive 0.5s forwards;
+}
+
+@keyframes fiveFive {
+    0% {
+        width: 0;
+        transform: translateX(32.5px);
+    }
+    100% {
+        width: 50px;
+        transform: translateX(10px);
+    }
+}
+
+
+/*five end*/
+
+
+/*six star*/
+
+.six div:nth-child(1) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    /*width: 50px;*/
+    top: 105px;
+    left: 60px;
+    transform: translateX(-100%);
+    animation: sixOne 1.5s forwards;
+}
+
+@keyframes sixOne {
+    0% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.six div:nth-child(2) {
+    position: absolute;
+    /*height: 100px;*/
+    height: 0;
+    width: 5px;
+    top: 60px;
+    left: 10px;
+    transform: translateY(-100%);
+    animation: sixTwo 1s forwards;
+}
+
+@keyframes sixTwo {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.six div:nth-child(3) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 10px;
+    left: 10px;
+    animation: sixThree 1.5s forwards;
+}
+
+@keyframes sixThree {
+    0% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.six div:nth-child(4) {
+    position: absolute;
+    height: 100px;
+    width: 5px;
+    top: 60px;
+    left: 55px;
+    animation: sixFour 1s forwards;
+}
+
+@keyframes sixFour {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.six div:nth-child(5) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 57.5px;
+    animation: sixFive 0.5s forwards;
+}
+
+@keyframes sixFive {
+    0% {
+        width: 0;
+        transform: translateX(32.5px);
+    }
+    100% {
+        width: 50px;
+        transform: translateX(10px);
+    }
+}
+
+.six div:nth-child(6) {
+    position: absolute;
+    height: 50px;
+    width: 5px;
+    top: 60px;
+    left: 10px;
+    animation: sixSix 1s forwards;
+}
+
+@keyframes sixSix {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+
+/*six end*/
+
+
+/*seven star*/
+
+.seven div:nth-child(1) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    /*width: 50px;*/
+    top: 10px;
+    left: 10px;
+    animation: sevenOne 0.5s forwards;
+}
+
+@keyframes sevenOne {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.seven div:nth-child(2) {
+    position: absolute;
+    /*height: 100px;*/
+    height: 0;
+    width: 5px;
+    top: 10px;
+    left: 55px;
+    animation: sevenTwo 1.5s forwards;
+}
+
+@keyframes sevenTwo {
+    0% {
+        height: 0;
+    }
+    33% {
+        height: 0;
+    }
+    66% {
+        height: 50px;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+
+/*seven end*/
+
+
+/*eight star*/
+
+.eight div:nth-child(1) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    /*width: 50px;*/
+    top: 105px;
+    left: 60px;
+    transform: translateX(-100%);
+    animation: eightOne 1.5s forwards;
+}
+
+@keyframes eightOne {
+    0% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.eight div:nth-child(2) {
+    position: absolute;
+    /*height: 100px;*/
+    height: 0;
+    width: 5px;
+    top: 60px;
+    left: 10px;
+    transform: translateY(-100%);
+    animation: eightTwo 1s forwards;
+}
+
+@keyframes eightTwo {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.eight div:nth-child(3) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 10px;
+    left: 10px;
+    animation: eightThree 1.5s forwards;
+}
+
+@keyframes eightThree {
+    0% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.eight div:nth-child(4) {
+    position: absolute;
+    height: 100px;
+    width: 5px;
+    top: 60px;
+    left: 55px;
+    animation: eightFour 1s forwards;
+}
+
+@keyframes eightFour {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.eight div:nth-child(5) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 57.5px;
+    animation: eightFive 0.5s forwards;
+}
+
+@keyframes eightFive {
+    0% {
+        width: 0;
+        transform: translateX(32.5px);
+    }
+    100% {
+        width: 50px;
+        transform: translateX(10px);
+    }
+}
+
+.eight div:nth-child(6) {
+    position: absolute;
+    height: 50px;
+    width: 5px;
+    top: 60px;
+    left: 10px;
+    animation: eightSix 1s forwards;
+}
+
+@keyframes eightSix {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.eight div:nth-child(7) {
+    position: absolute;
+    height: 50px;
+    width: 5px;
+    top: 60px;
+    left: 55px;
+    transform: translateY(-100%);
+    animation: eightSeven 1s forwards;
+}
+
+@keyframes eightSeven {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+
+/*eight end*/
+
+
+/*nine star*/
+
+.nine div:nth-child(1) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    /*width: 50px;*/
+    top: 105px;
+    left: 60px;
+    transform: translateX(-100%);
+    animation: nineOne 1.5s forwards;
+}
+
+@keyframes nineOne {
+    0% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.nine div:nth-child(2) {
+    position: absolute;
+    /*height: 100px;*/
+    height: 0;
+    width: 5px;
+    top: 60px;
+    left: 10px;
+    transform: translateY(-100%);
+    animation: nineTwo 1s forwards;
+}
+
+@keyframes nineTwo {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.nine div:nth-child(3) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 10px;
+    left: 10px;
+    animation: nineThree 1.5s forwards;
+}
+
+@keyframes nineThree {
+    0% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.nine div:nth-child(4) {
+    position: absolute;
+    height: 100px;
+    width: 5px;
+    top: 60px;
+    left: 55px;
+    animation: nineFour 1s forwards;
+}
+
+@keyframes nineFour {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+.nine div:nth-child(5) {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    top: 57.5px;
+    animation: nineFive 0.5s forwards;
+}
+
+@keyframes nineFive {
+    0% {
+        width: 0;
+        transform: translateX(32.5px);
+    }
+    100% {
+        width: 50px;
+        transform: translateX(10px);
+    }
+}
+
+.nine div:nth-child(6) {
+    position: absolute;
+    height: 50px;
+    width: 5px;
+    top: 60px;
+    left: 55px;
+    transform: translateY(-100%);
+    animation: nineSix 1s forwards;
+}
+
+@keyframes nineSix {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 50px;
+    }
+}
+
+
+/*nine end*/
